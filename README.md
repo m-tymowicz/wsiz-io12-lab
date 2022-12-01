@@ -103,3 +103,13 @@ Podaj liczbę nr 6: 47
 Najmniejsza z podanych liczb to: 3.567
 Największa z podanych liczb to: 89.1
 ```
+
+#### 1.9
+
+Wyznacz średnią arytmetyczną z tablicy liczb rzeczywistych.
+
+Wypisz wyznaczoną średnią wraz z tablicą w postaci:
+
+```
+Średnia liczb: [0.75, 5.0, 0.25, 3.0] to 2.25
+```
