@@ -113,3 +113,9 @@ Wypisz wyznaczoną średnią wraz z tablicą w postaci:
 ```
 Średnia liczb: [0.75, 5.0, 0.25, 3.0] to 2.25
 ```
+
+#### 2.1
+
+Utwórz klasę `Program` zawierającą metodę `main`.
+
+Utwórz klasę `Employee` z polami składowymi: `firstname`, `lastname` oraz `age`.
