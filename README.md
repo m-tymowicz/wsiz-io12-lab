@@ -119,3 +119,12 @@ Wypisz wyznaczoną średnią wraz z tablicą w postaci:
 Utwórz klasę `Program` zawierającą metodę `main`.
 
 Utwórz klasę `Employee` z polami składowymi: `firstname`, `lastname` oraz `age`.
+
+#### 2.2
+
+Do klasy `Employee` dodaj metodę `print` wypisującą na ekranie pracownika wg szablonu:
+
+`Jan Kowalski 31`
+
+Zweryfikuj poprawność działania metody: w metodzie `main` stwórz obiekt klasy `Employee`, ustaw wartości pól, a
+następnie wypisz przy pomocy nowo powstałej metody jego zawartość.
