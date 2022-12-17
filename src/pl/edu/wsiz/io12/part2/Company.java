@@ -5,8 +5,22 @@ import java.util.ArrayList;
 public class Company {
     private ArrayList<Employee> employees = new ArrayList<>();
 
-    public void add(Employee employee) {
-        employees.add(employee);
+    private boolean employeeExists(Employee employee) {
+        for (Employee tmpEmployee : employees) {
+            if (tmpEmployee.isEqual(employee)) {
+                return true;
+            }
+        }
+
+        return false;
+    }
+
+    public void add(Employee newEmployee) {
+        if (!employeeExists(newEmployee)) {
+            employees.add(newEmployee);
+        } else {
+            System.out.println("Pracownik o tych samych danych znajduje się już na liście!");
+        }
     }
 
     public void printEmployees() {
