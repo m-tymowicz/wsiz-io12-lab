@@ -1,5 +1,7 @@
 package pl.edu.wsiz.io12.part2;
 
+import java.util.Scanner;
+
 public class Employee {
     String firstname;
     String lastname;
@@ -10,11 +12,17 @@ public class Employee {
     }
 
     static Employee read() {
+        Scanner scanner = new Scanner(System.in);
         Employee e = new Employee();
 
-//        e.firstname = "Jan";
-//        e.lastname = "Kowalski";
-//        e.age = 39;
+        System.out.print("Podaj imię:      ");
+        e.firstname = scanner.next();
+
+        System.out.print("Podaj nazwisko:  ");
+        e.lastname = scanner.next();
+
+        System.out.print("Podaj wiek:      ");
+        e.age = scanner.nextInt();
 
         return e;
     }
