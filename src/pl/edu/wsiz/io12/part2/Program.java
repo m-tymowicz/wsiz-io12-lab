@@ -11,10 +11,7 @@ public class Program {
         company.add(new Employee("Anna", "Kowalczyk", 27));
         company.add(new Employee("Piotr", "Nowak", 36));
 
-        int operationNumber = 0;
-
-        while (operationNumber != 9) {
-
+        while (true) {
             System.out.println("Lista operacji:\n");
 
             System.out.println("1 - wypisz listę pracowników");
@@ -23,7 +20,7 @@ public class Program {
             System.out.println("9 - zakończ program\n");
 
             System.out.print("Podaj numer operacji: ");
-            operationNumber = scanner.nextInt();
+            int operationNumber = scanner.nextInt();
 
             if (operationNumber == 1) {
                 company.printEmployees();
@@ -36,10 +33,12 @@ public class Program {
                 int employeeNumber = scanner.nextInt();
                 company.removeEmployee(employeeNumber);
 
-            } else if (operationNumber != 9) {
+            } else if (operationNumber == 9) {
+                break;
+
+            } else {
                 System.out.println("Operacja o podanym numerze nie istnieje!");
             }
         }
-
     }
 }
