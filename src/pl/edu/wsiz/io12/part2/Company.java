@@ -3,7 +3,7 @@ package pl.edu.wsiz.io12.part2;
 import java.util.ArrayList;
 
 public class Company {
-    private ArrayList<Employee> employees = new ArrayList<>();
+    private final ArrayList<Employee> employees = new ArrayList<>();
 
     private boolean employeeExists(Employee employee) {
         for (Employee tmpEmployee : employees) {
@@ -26,6 +26,15 @@ public class Company {
     public void add() {
         Employee employee = Employee.read();
         add(employee);
+    }
+
+    public void removeEmployee(int employeeNumber) {
+        if (employeeNumber < 1 || employeeNumber > employees.size()) {
+            System.out.println("Lista nie zawiera pracownika o podanym numerze porządkowym.");
+            return;
+        }
+
+        employees.remove(employeeNumber - 1);
     }
 
     public void printEmployees() {
