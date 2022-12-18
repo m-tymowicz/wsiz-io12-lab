@@ -4,18 +4,13 @@ public class Program {
     public static void main(String[] args) {
         Company company = new Company();
 
-        company.add(new Employee("Jan", "Kowalski", 31));
-        company.add(new Employee("Anna", "Kowalczyk", 27));
-        company.add(new Employee("Piotr", "Nowak", 36));
+        System.out.println("Lista operacji:\n");
 
-        company.printEmployees();
+        System.out.println("1 - wypisz listę pracowników");
+        System.out.println("2 - dodaj pracownika");
+        System.out.println("3 - usuń pracownika");
+        System.out.println("9 - zakończ program\n");
 
-        company.removeEmployee(4);
-        company.removeEmployee(3);
-
-        company.removeEmployee(0);
-        company.removeEmployee(1);
-
-        company.printEmployees();
+        System.out.println("Podaj numer operacji:");
     }
 }
