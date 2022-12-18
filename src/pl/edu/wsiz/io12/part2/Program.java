@@ -11,29 +11,35 @@ public class Program {
         company.add(new Employee("Anna", "Kowalczyk", 27));
         company.add(new Employee("Piotr", "Nowak", 36));
 
-        System.out.println("Lista operacji:\n");
+        int operationNumber = 0;
 
-        System.out.println("1 - wypisz listę pracowników");
-        System.out.println("2 - dodaj pracownika");
-        System.out.println("3 - usuń pracownika");
-        System.out.println("9 - zakończ program\n");
+        while (operationNumber != 9) {
 
-        System.out.print("Podaj numer operacji: ");
-        int operationNumber = scanner.nextInt();
+            System.out.println("Lista operacji:\n");
 
-        if (operationNumber == 1) {
-            company.printEmployees();
+            System.out.println("1 - wypisz listę pracowników");
+            System.out.println("2 - dodaj pracownika");
+            System.out.println("3 - usuń pracownika");
+            System.out.println("9 - zakończ program\n");
 
-        } else if (operationNumber == 2) {
-            company.add();
+            System.out.print("Podaj numer operacji: ");
+            operationNumber = scanner.nextInt();
 
-        } else if (operationNumber == 3) {
-            System.out.print("Podaj numer pracownika do usunięcia: ");
-            int employeeNumber = scanner.nextInt();
-            company.removeEmployee(employeeNumber);
+            if (operationNumber == 1) {
+                company.printEmployees();
+
+            } else if (operationNumber == 2) {
+                company.add();
+
+            } else if (operationNumber == 3) {
+                System.out.print("Podaj numer pracownika do usunięcia: ");
+                int employeeNumber = scanner.nextInt();
+                company.removeEmployee(employeeNumber);
+
+            } else if (operationNumber != 9) {
+                System.out.println("Operacja o podanym numerze nie istnieje!");
+            }
         }
-        
 
-        // company.printEmployees();
     }
 }
