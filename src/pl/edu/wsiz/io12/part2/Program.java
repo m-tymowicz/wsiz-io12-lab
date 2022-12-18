@@ -4,15 +4,15 @@ import java.util.Scanner;
 
 public class Program {
 
-    private static final int EXIT_OPERATION_CODE = 99;
+    private static final int EXIT_OPERATION_CODE = 9;
 
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         Company company = new Company();
 
-        company.add(new Employee("Jan", "Kowalski", 31));
-        company.add(new Employee("Anna", "Kowalczyk", 27));
-        company.add(new Employee("Piotr", "Nowak", 36));
+        company.add(new Employee("Jan", "Kowalski", 31, Sex.MALE));
+        company.add(new Employee("Anna", "Kowalczyk", 27, Sex.FEMALE));
+        company.add(new Employee("Piotr", "Nowak", 36, Sex.MALE));
 
         int operationNumber = 0;
 

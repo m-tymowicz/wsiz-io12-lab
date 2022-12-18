@@ -6,21 +6,25 @@ public class Employee {
     private final String firstname;
     private final String lastname;
     private final int age;
+    private final Sex sex;
 
-    public Employee(String firstname, String lastname, int age) {
+    public Employee(String firstname, String lastname, int age, Sex sex) {
         this.firstname = firstname;
         this.lastname = lastname;
         this.age = age;
+        this.sex = sex;
     }
 
     public void print() {
-        System.out.print(firstname + " " + lastname + " " + age);
+        char sexChar = sex == Sex.FEMALE ? 'K' : 'M';
+        System.out.print(firstname + " " + lastname + " " + age + " " + sexChar);
     }
 
     public boolean isEqual(Employee otherEmployee) {
         return this.firstname.equalsIgnoreCase(otherEmployee.firstname)
                 && this.lastname.equalsIgnoreCase(otherEmployee.lastname)
-                && this.age == otherEmployee.age;
+                && this.age == otherEmployee.age
+                && this.sex == otherEmployee.sex;
     }
 
     public static Employee read() {
@@ -35,6 +39,10 @@ public class Employee {
         System.out.print("Podaj wiek:      ");
         int tmpAge = scanner.nextInt();
 
-        return new Employee(tmpFirstname, tmpLastname, tmpAge);
+        System.out.print("Podaj płeć:      ");
+        char charSex = scanner.next().toUpperCase().charAt(0);
+        Sex tmpSex = charSex == 'K' ? Sex.FEMALE : Sex.MALE;
+
+        return new Employee(tmpFirstname, tmpLastname, tmpAge, tmpSex);
     }
 }
