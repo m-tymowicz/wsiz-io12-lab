@@ -23,6 +23,11 @@ public class Company {
         }
     }
 
+    public void add() {
+        Employee employee = Employee.read();
+        add(employee);
+    }
+
     public void printEmployees() {
         System.out.println("--------------------");
 

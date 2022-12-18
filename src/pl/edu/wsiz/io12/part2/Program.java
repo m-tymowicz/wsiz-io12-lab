@@ -8,7 +8,7 @@ public class Program {
         company.add(new Employee("Anna", "Kowalczyk", 27));
         company.add(new Employee("Piotr", "Nowak", 36));
 
-        company.add(new Employee("Piotr", "NOWAK", 36));
+        company.add();
 
         company.printEmployees();
     }
